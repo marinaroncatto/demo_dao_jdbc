@@ -16,7 +16,11 @@ public class Program2 {
 		Department newDepartment = new Department(null, "Music");
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! New id = "+ newDepartment.getId());
-
+		
+		System.out.println("\n===== TEST 2: Department findById =====");
+		Department dep = departmentDao.findById(4);
+		System.out.println(dep);
+		
 	}
 
 }

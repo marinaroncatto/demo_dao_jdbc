@@ -2,6 +2,7 @@ package application;
 
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
+import model.entities.Department;
 
 public class Program2 {
 
@@ -10,7 +11,11 @@ public class Program2 {
 		
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
+		System.out.println("===== TEST 1: Department inset =====");
 		
+		Department newDepartment = new Department(null, "Music");
+		departmentDao.insert(newDepartment);
+		System.out.println("Inserted! New id = "+ newDepartment.getId());
 
 	}
 
